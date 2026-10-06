@@ -1,7 +1,7 @@
 import pandas as pd
 def get_communities_data(as_df=False):
 
-    df = pd.read_csv('/Users/deborah/PycharmProjects/FairModelSelection/data/communities.csv')
+    df = pd.read_csv('/Users/deborah/PycharmProjects/FairVariableSelection/data/communities.csv')
     df = df.fillna(0)
 
     sens_attrs = ['racepctblack', 'racePctWhite', 'racePctAsian', 'racePctHisp']
@@ -26,7 +26,7 @@ def get_communities_data(as_df=False):
 
 
 def get_lawschool_data(as_df=False):
-    df = pd.read_csv('/Users/deborah/PycharmProjects/FairModelSelection/data/lawschool.csv')
+    df = pd.read_csv('/Users/deborah/PycharmProjects/FairVariableSelection/data/lawschool.csv')
     df = df.dropna()
     y = df['ugpa']  # target: gpa in [0,4]
     df = df.drop('ugpa', axis=1)
